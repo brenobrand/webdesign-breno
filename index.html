@@ -4,14 +4,17 @@
   <meta charset="utf-8">
   <title>Exemplo didático de HTML da Aula</title>
   <style>
+    /* Classe para centralizar textos */
     .center {
       text-align: center;
     }
   </style>
 </head>
 <body>
+  <!-- Cabeçalho principal da página -->
   <header id="topo">
-    <h1 align="center">Meu Blog (H1 centralizado)</h1>
+    <!-- Uso de H1 a H6 para mostrar hierarquia de títulos -->
+    <h1 align="center">Meu Blog (H1 centralizado)</h1> 
     <h2 align="left">Subtítulo (H2 à esquerda)</h2>
     <h3 align="right">Outro subtítulo (H3 à direita)</h3>
     <h4>Seção menor (H4)</h4>
@@ -19,6 +22,7 @@
     <h6>Seção específica (H6)</h6>
   </header>
 
+  <!-- Menu de navegação principal com links internos -->
   <nav aria-label="Navegação principal">
     <p>
       <a href="#posts">Posts</a> |
@@ -27,11 +31,14 @@
     </p>
   </nav>
 
+  <!-- Área principal de posts -->
   <section id="posts">
     <article class="post">
       <header>
         <h2>Meu Blog – Primeiro Post</h2>
       </header>
+
+      <!-- Exemplo de formatações semânticas -->
       <p>
         Este é um texto com <strong>negrito</strong> e <em>itálico</em>.
         Aqui temos um <span style="text-decoration: underline;">trecho sublinhado</span>
@@ -39,10 +46,16 @@
         Exemplos de <sub>subscrito</sub> (H<sub>2</sub>O) e
         <sup>sobrescrito</sup> (m<sup>2</sup>).
       </p>
+
+      
       <p style="color: blue; font-size: 1.25rem;">
         Este parágrafo está com cor azul e tamanho de fonte maior.
       </p>
+
+      <!-- Uso da classe CSS para centralizar -->
       <div class="center">Este texto está centralizado</div>
+
+      <!-- Parágrafo justificado -->
       <p style="text-align: justify;">
         Este é um parágrafo mais longo para demonstrar o alinhamento justificado
         nas margens esquerda e direita.
@@ -52,11 +65,13 @@
     </article>
   </section>
 
+  <!-- Conteúdo lateral complementar -->
   <aside id="lateral">
     <h3>Conteúdo Relacionado</h3>
     <p>Aqui você pode encontrar links, notas e materiais que complementam o conteúdo do post.</p>
   </aside>
 
+  <!-- Rodapé da página -->
   <footer id="rodape">
     <p>© 2025 – Exemplo didático de HTML da Aula</p>
   </footer>
