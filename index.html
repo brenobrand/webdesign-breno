@@ -1,64 +1,151 @@
 <!DOCTYPE html>
+<!-- Documento HTML5 -->
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <title>Exemplo didático de HTML da Aula</title>
-  <style>
-    .center {
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <!-- Configuração para responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04 - Mídias em HTML</title>
+
+    <!-- Estilos CSS -->
+    <style>
+        /* Classe destaque: usada para parágrafos com fundo amarelo claro */
+        .destaque { background-color: #fff9b1; padding: 5px; }
+
+        /* Container genérico estilizado */
+        .container { border: 1px solid #ccc; padding: 10px; margin-top: 20px; background-color: #f5f5f5; }
+
+        /* Estilo da tabela */
+        table { border-collapse: collapse; margin-top: 10px; }
+        table, th, td { border: 1px solid black; padding: 5px; }
+    </style>
 </head>
 <body>
-  <header id="topo">
-    <h1 align="center">Meu Blog (H1 centralizado)</h1>
-    <h2 align="left">Subtítulo (H2 à esquerda)</h2>
-    <h3 align="right">Outro subtítulo (H3 à direita)</h3>
-    <h4>Seção menor (H4)</h4>
-    <h5>Seção ainda menor (H5)</h5>
-    <h6>Seção específica (H6)</h6>
-  </header>
 
-  <nav aria-label="Navegação principal">
-    <p>
-      <a href="#posts">Posts</a> |
-      <a href="#lateral">Lateral</a> |
-      <a href="#rodape">Rodapé</a>
-    </p>
-  </nav>
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>Trabalho de Mídias em HTML</h1>
+    </header>
 
-  <section id="posts">
-    <article class="post">
-      <header>
-        <h2>Meu Blog – Primeiro Post</h2>
-      </header>
-      <p>
-        Este é um texto com <strong>negrito</strong> e <em>itálico</em>.
-        Aqui temos um <span style="text-decoration: underline;">trecho sublinhado</span>
-        e um <span style="text-decoration: line-through;">trecho riscado</span>.
-        Exemplos de <sub>subscrito</sub> (H<sub>2</sub>O) e
-        <sup>sobrescrito</sup> (m<sup>2</sup>).
-      </p>
-      <p style="color: blue; font-size: 1.25rem;">
-        Este parágrafo está com cor azul e tamanho de fonte maior.
-      </p>
-      <div class="center">Este texto está centralizado</div>
-      <p style="text-align: justify;">
-        Este é um parágrafo mais longo para demonstrar o alinhamento justificado
-        nas margens esquerda e direita.
-        <br>
-        Após a quebra de linha (&lt;br&gt;), o texto continua com o mesmo alinhamento.
-      </p>
-    </article>
-  </section>
+    <!-- Conteúdo principal -->
+    <main>
 
-  <aside id="lateral">
-    <h3>Conteúdo Relacionado</h3>
-    <p>Aqui você pode encontrar links, notas e materiais que complementam o conteúdo do post.</p>
-  </aside>
+        <!-- Parágrafo introdutório com ID único -->
+        <p id="introducao">Este é um trabalho prático da disciplina de Web Design, aplicando imagens, áudios, vídeos, tabelas e formulários em HTML5.</p>
 
-  <footer id="rodape">
-    <p>© 2025 – Exemplo didático de HTML da Aula</p>
-  </footer>
+        <!-- Inserindo imagens (3 no total) -->
+        <h2>Imagens</h2>
+        <!-- Imagem com tamanho definido -->
+        <img src="img/img1.png" alt="Imagem de exemplo 1" width="200" height="150">
+        <!-- Segunda imagem com tamanho definido -->
+        <img src="img/img2.png" alt="Imagem de exemplo 2" width="150" height="150">
+        <!-- Terceira imagem sem width/height para aparecer no tamanho original -->
+        <img src="img/img3.png" alt="Imagem de exemplo 3">
+
+        <!-- Inserindo vídeo -->
+        <h2>Vídeo</h2>
+        <!-- Vídeo com controles, largura definida e poster -->
+        <video src="video.mp4" width="320" controls poster="img/poster.jpg"></video>
+        <!-- Se remover "controls", o usuário não teria botões de play/pause -->
+
+        <!-- Inserindo áudio -->
+        <h2>Áudio</h2>
+        <!-- Player de áudio com 2 formatos para compatibilidade -->
+        <audio controls>
+            <source src="money.mp3" oldsrc="musica.mp3" type="audio/mpeg">
+            <source src="money.mp3" oldsrc="musica.ogg" type="audio/ogg">
+            Seu navegador não suporta áudio.
+        </audio>
+
+        <!-- Formulário com os campos solicitados -->
+        <h2>Formulário de Contato</h2>
+        <form action="processar.php" method="post">
+            <!-- Campo de texto obrigatório -->
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <!-- Campo de e-mail obrigatório -->
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <!-- Campo de mensagem (textarea) -->
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem"></textarea><br><br>
+
+            <!-- Botão de envio -->
+            <input type="submit" value="Enviar">
+        </form>
+
+        <!-- Links -->
+        <h2>Links</h2>
+        <!-- Link simples para o Google -->
+        <a href="https://www.google.com">Ir para o Google</a><br>
+        <!-- Link com imagem clicável -->
+        <a href="https://www.google.com"><img src="img/img1.png" alt="Google"></a><br>
+        <!-- Link que abre em nova aba -->
+        <a href="https://www.google.com" target="_blank">Abrir Google em nova aba</a>
+
+        <!-- Listas -->
+        <h2>Listas</h2>
+        <!-- Lista ordenada -->
+        <p>Lista ordenada:</p>
+        <ol>
+            <li>Passo 1</li>
+            <li>Passo 2</li>
+            <li>Passo 3</li>
+        </ol>
+
+        <!-- Lista não ordenada -->
+        <p>Lista não ordenada:</p>
+        <ul>
+            <li>Item A</li>
+            <li>Item B</li>
+            <li>Item C</li>
+        </ul>
+
+        <!-- Tabela -->
+        <h2>Tabela</h2>
+        <!-- Tabela com cabeçalho e corpo -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Coluna 1</th>
+                    <th>Coluna 2</th>
+                    <th>Coluna 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dado 1</td>
+                    <td>Dado 2</td>
+                    <td>Dado 3</td>
+                </tr>
+                <tr>
+                    <td>Dado 4</td>
+                    <td>Dado 5</td>
+                    <td>Dado 6</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Parágrafos com classe destaque -->
+        <h2>Parágrafos em Destaque</h2>
+        <p class="destaque">Este é o primeiro parágrafo em destaque.</p>
+        <p class="destaque">Este é o segundo parágrafo em destaque.</p>
+
+        <!-- Div container -->
+        <div class="container">
+            <h3>Seção em contêiner</h3>
+            <p>Este texto está dentro de uma div com estilo aplicado.</p>
+            <p>Podemos usar esse recurso para organizar o layout da página.</p>
+        </div>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Desenvolvido por [Seu Nome] - Disciplina de Web Design</p>
+    </footer>
+
 </body>
 </html>
